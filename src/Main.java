@@ -1,7 +1,8 @@
 import java.util.*;
+
 public class Main {
     private static final List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
-    private static final List<String> strings = new ArrayList<>(List.of("один", "два","два", "три", "три", "три"));
+    private static final List<String> strings = new ArrayList<>(List.of("один", "два", "два", "три", "три", "три"));
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -33,22 +34,23 @@ public class Main {
         }
 
     }
-    public static void printUniqueWords(){
+
+    public static void printUniqueWords() {
         Set<String> uniqueWords = new HashSet<>(strings);
         System.out.println(uniqueWords);
     }
-    public static void printDuplicates(){
+
+    public static void printDuplicates() {
         Map<String, Integer> uniqueWords = new HashMap<>();
         for (String string : strings) {
-            if(!uniqueWords.containsKey(string)){
-                uniqueWords.put(string,1);
+            if (!uniqueWords.containsKey(string)) {
+                uniqueWords.put(string, 1);
             } else {
-                uniqueWords.put(string,uniqueWords.get(string) + 1);
+                uniqueWords.put(string, uniqueWords.get(string) + 1);
             }
         }
         System.out.println(uniqueWords.values());
     }
-
 
 
 }
